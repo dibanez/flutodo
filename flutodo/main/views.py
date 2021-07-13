@@ -16,7 +16,7 @@ def register_request(request):
             user = form.save()
             login(request, user)
             messages.success(request, "Registration successful.")
-            return redirect("/todo/ ")
+            return redirect("/todo/")
         messages.error(
             request, "Unsuccessful registration. Invalid information.")
     form = NewUserForm
